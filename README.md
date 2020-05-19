@@ -63,4 +63,6 @@ pole:          51.63
 traffic-sign:  36.05
 ```
 
-There are some differences with the results in the paper, but we think the overall results is acceptable.
+There are some differences with the results in the paper, but we think the overall results is acceptable. 
+
+The checkpoint is in the output folder.
