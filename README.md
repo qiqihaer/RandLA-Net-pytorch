@@ -10,9 +10,9 @@ This repository contains a PyTorch implementation of [RandLA-Net](http://arxiv.o
 
 3. Install python functions. the functions and the codes are copied from the [official implementation with Tensorflow](https://github.com/QingyongHu/RandLA-Net).
 
-   ```
-   sh compile_op.sh
-   ```
+```
+sh compile_op.sh
+```
 4. Download the [Semantic KITTI dataset](http://semantic-kitti.org/dataset.html#download), and preprocess the data:
   ```
   python utils/data_prepare_semantickitti.py
@@ -63,4 +63,6 @@ pole:          51.63
 traffic-sign:  36.05
 ```
 
-There are some differences with the results in the paper, but we think the overall results is acceptable.
+There are some differences with the results in the paper, but we think the overall results is acceptable. 
+
+The checkpoint is in the output folder.
