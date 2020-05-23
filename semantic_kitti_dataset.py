@@ -55,6 +55,13 @@ class SemanticKITTI(torch_data.Dataset):
 
         self.possibility = []
         self.min_possibility = []
+        if mode == 'test':
+            path_list = self.data_list
+            for test_file_name in path_list:
+                points = np.load(test_file_name)
+                self.possibility += [np.random.rand(points.shape[0]) * 1e-3]
+                self.min_possibility += [float(np.min(self.possibility[-1]))]
+
         cfg.ignored_label_inds = [self.label_to_idx[ign_label] for ign_label in self.ignored_labels]
         cfg.class_weights = DP.get_class_weights('SemanticKITTI')
 
